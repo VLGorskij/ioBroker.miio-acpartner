@@ -6,7 +6,7 @@
 
 // you have to require the utils module and call adapter function
 const utils = require(__dirname + '/lib/utils'); // Get common adapter utils
-const adapter = new utils.Adapter('mihome-vacuum');
+const adapter = new utils.Adapter('miio-acpartner');
 const dgram = require('dgram');
 const MiHome = require(__dirname + '/lib/mihomepacket');
 const com = require(__dirname + '/lib/comands');
@@ -531,7 +531,7 @@ function checkSetTimeDiff() {
     packet.timediff = (messageTime - now) === -1 ? 0 : (messageTime - now); // may be (messageTime < now) ? 0...
 
     if (firstSet && packet.timediff !== 0) {
-        adapter.log.warn('Time difference between Mihome Vacuum and ioBroker: ' + packet.timediff + ' sec');
+        adapter.log.warn('Time difference between AC Partner and ioBroker: ' + packet.timediff + ' sec');
     }
 
     if (firstSet) {
