@@ -46,8 +46,7 @@
     ],
     "keywords": [
       "miio",
-      "acpartner",
-      "ktbl01lm"
+      "acpartner"
     ],
     "license": "MIT",
     "platform": "Javascript/Node.js",
