@@ -1,0 +1,323 @@
+{
+  "common": {
+    "name": "miio-acpartner",
+    "version": "0.0.1",
+    "news": {
+      "0.0.1": {
+        "en": "initial release",
+        "de": "Erstveröffentlichung",
+        "ru": "Начальная версия",
+        "pt": "lançamento inicial",
+        "nl": "Eerste uitgave",
+        "fr": "Première version",
+        "it": "Versione iniziale",
+        "es": "Versión inicial",
+        "pl": "Pierwsze wydanie",
+        "zh-cn": "首次出版"
+      }
+    },
+    "title": "miio-acpartner",
+    "titleLang": {
+      "en": "miio-acpartner",
+      "de": "miio-acpartner",
+      "ru": "miio-acpartner",
+      "pt": "miio-acpartner",
+      "nl": "Miio-acpartner",
+      "fr": "miio-acpartner",
+      "it": "miio-acpartner",
+      "es": "miio-socio",
+      "pl": "miio-acpartner",
+      "zh-cn": "小伙伴"
+    },
+    "desc": {
+      "en": "miio-acpartner",
+      "de": "miio-acpartner",
+      "ru": "miio-acpartner",
+      "pt": "miio-acpartner",
+      "nl": "Miio-acpartner",
+      "fr": "miio-acpartner",
+      "it": "miio-acpartner",
+      "es": "miio-socio",
+      "pl": "miio-acpartner",
+      "zh-cn": "小伙伴"
+    },
+    "authors": [
+      "Vladimir <vlgorskij@yandex.ru>"
+    ],
+    "keywords": [
+      "miio",
+      "acpartner"
+    ],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "main": "main.js",
+    "icon": "miio-acpartner.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/VLGorskij/ioBroker.miio-acpartner/master/admin/miio-acpartner.png",
+    "readme": "https://github.com/VLGorskij/ioBroker.miio-acpartner/blob/master/README.md",
+    "loglevel": "info",
+    "mode": "daemon",
+    "type": "climate-control",
+    "compact": true,
+    "materialize": true,
+    "materializeTab": true,
+    "adminTab": {
+      "singleton": true,
+      "name": {
+        "en": "miio-acpartner",
+        "de": "miio-acpartner",
+        "ru": "miio-acpartner",
+        "pt": "miio-acpartner",
+        "nl": "Miio-acpartner",
+        "fr": "miio-acpartner",
+        "it": "miio-acpartner",
+        "es": "miio-socio",
+        "pl": "miio-acpartner",
+        "zh-cn": "小伙伴"
+      },
+      "link": "",
+      "fa-icon": "info"
+    },
+    "supportCustoms": true,
+    "dependencies": [
+      {
+        "js-controller": ">=1.4.2"
+      }
+    ],
+    "installedFrom": "https://github.com/VLGorskij/ioBroker.miio-acpartner/tarball/9dad045ec1cdcc84043680f6bad964ff1aa39953"
+  },
+  "native": {
+    "port": 54321,
+    "ownPort": 53421,
+    "pingInterval": 20000,
+    "param_pingInterval": 60000
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "service_info",
+      "type": "channel",
+      "common": {
+        "name": "Service information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "service_info.rc_type",
+      "type": "state",
+      "common": {
+        "name": "Remote control type",
+        "type": "string",
+        "read": true,
+        "desc": "Remote control type"
+      },
+      "native": {}
+    },
+    {
+      "_id": "service_info.model_format",
+      "type": "state",
+      "common": {
+        "name": "Model format",
+        "type": "string",
+        "read": true,
+        "desc": "Model format"
+      },
+      "native": {}
+    },
+    {
+      "_id": "service_info.device_type",
+      "type": "state",
+      "common": {
+        "name": "Device type",
+        "type": "string",
+        "read": true,
+        "desc": "Device type"
+      },
+      "native": {}
+    },
+    {
+      "_id": "service_info.air_condition_brand",
+      "type": "state",
+      "common": {
+        "name": "Air condition brand",
+        "type": "string",
+        "read": true,
+        "desc": "Air condition brand"
+      },
+      "native": {}
+    },
+    {
+      "_id": "service_info.state_format",
+      "type": "state",
+      "common": {
+        "name": "State format",
+        "type": "string",
+        "read": true,
+        "desc": "State format"
+      },
+      "native": {}
+    },
+    {
+      "_id": "control",
+      "type": "channel",
+      "common": {
+        "name": "AC Partner Control"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "If connected to AC",
+        "type": "boolean",
+        "read": true
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.power",
+      "type": "state",
+      "common": {
+        "name": "Power",
+        "type": "number",
+        "role": "indicator",
+        "read": true,
+        "unit": "W",
+        "desc": "Power consumption of the  AC_Partner"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.wifi_signal",
+      "type": "state",
+      "common": {
+        "name": "Wifi RSSI",
+        "type": "number",
+        "role": "level",
+        "read": true,
+        "unit": "dBm",
+        "desc": "Wifi signal of the  AC_Partner"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.device_model",
+      "type": "state",
+      "common": {
+        "name": "Device model",
+        "type": "string",
+        "read": true,
+        "desc": "model of AC_Partner"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.device_fw",
+      "type": "state",
+      "common": {
+        "name": "Firmware",
+        "type": "string",
+        "read": true,
+        "desc": "Firmware of AC_Partner"
+      },
+      "native": {}
+    },
+    {
+      "_id": "control.on_off",
+      "type": "state",
+      "common": {
+        "name": "Air conditioning switch status",
+        "type": "string",
+        "read": true,
+        "write": true,
+        "desc": "Air conditioning switch status. The values are: off, on, toggle"
+      },
+      "native": {}
+    },
+    {
+      "_id": "control.led",
+      "type": "state",
+      "common": {
+        "name": "Air conditioning led",
+        "type": "string",
+        "read": true,
+        "write": true,
+        "desc": "Air conditioning led"
+      },
+      "native": {}
+    },
+    {
+      "_id": "control.mode",
+      "type": "state",
+      "common": {
+        "name": "Air conditioning mode",
+        "type": "string",
+        "read": true,
+        "write": true,
+        "desc": "Air conditioning mode. The values are: heat, cool, auto, dry, wind, circle"
+      },
+      "native": {}
+    },
+    {
+      "_id": "control.ws",
+      "type": "state",
+      "common": {
+        "name": "Air conditioning speed",
+        "type": "string",
+        "read": true,
+        "write": true,
+        "desc": "Air conditioning speed.The values are: low, middle, high, auto, circle"
+      },
+      "native": {}
+    },
+    {
+      "_id": "control.swing",
+      "type": "state",
+      "common": {
+        "name": "Air conditioning swing",
+        "type": "string",
+        "read": true,
+        "write": true,
+        "desc": "Air conditioning swing. The values are: unswing, swing"
+      },
+      "native": {}
+    },
+    {
+      "_id": "control.temp",
+      "type": "state",
+      "common": {
+        "name": "Air conditioning temperature",
+        "type": "number",
+        "read": true,
+        "write": true,
+        "desc": "Air conditioning temperature. The values are current temperature: 17~30"
+      },
+      "native": {}
+    },
+    {
+      "_id": "control.power_state",
+      "type": "state",
+      "common": {
+        "role": "switch",
+        "name": "Power on_off",
+        "type": "boolean",
+        "read": true,
+        "write": true,
+        "def": false
+      },
+      "native": {}
+    }
+
+
+  ]
+}
