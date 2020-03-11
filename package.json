@@ -19,6 +19,8 @@
   "dependencies": {
     "@iobroker/adapter-core": "^2.2.1"
   },
+  "deprecated": false,
+  "description": "miio-acpartner",  
   "devDependencies": {
     "gulp": "^4.0.0",
     "mocha": "^7.1.0",
