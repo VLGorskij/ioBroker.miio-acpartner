@@ -84,7 +84,7 @@
         "js-controller": ">=1.4.2"
       }
     ],
-    "installedFrom": "https://github.com/VLGorskij/ioBroker.miio-acpartner/tarball/9dad045ec1cdcc84043680f6bad964ff1aa39953"
+  
   },
   "native": {
     "port": 54321,
