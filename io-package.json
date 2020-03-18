@@ -60,24 +60,6 @@
     "type": "climate-control",
     "compact": true,
     "materialize": true,
-    "materializeTab": true,
-    "adminTab": {
-      "singleton": true,
-      "name": {
-        "en": "miio-acpartner",
-        "de": "miio-acpartner",
-        "ru": "miio-acpartner",
-        "pt": "miio-acpartner",
-        "nl": "Miio-acpartner",
-        "fr": "miio-acpartner",
-        "it": "miio-acpartner",
-        "es": "miio-socio",
-        "pl": "miio-acpartner",
-        "zh-cn": "小伙伴"
-      },
-      "link": "",
-      "fa-icon": "info"
-    },
     "supportCustoms": true,
     "dependencies": [
       {
