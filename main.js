@@ -438,8 +438,8 @@ function getStates(message) {
 
 
 
-            adapter.setState('control.result2', acpartner.config, true);
-            adapter.setState('control.result4', answer.result[1], true);
+            // adapter.setState('control.result2', acpartner.config, true);
+            // adapter.setState('control.result4', answer.result[1], true);
 
             adapter.setState('control.on_off', acpartner.on_off, true);
             adapter.setState('control.mode', acpartner.mode, true);
@@ -479,7 +479,7 @@ function getStates(message) {
 
 
 //create default states
-function init() {
+/*function init() {
 
     adapter.setObjectNotExists('control.result2', {
         type: 'state',
@@ -508,7 +508,7 @@ function init() {
         native: {}
     });
 
-}
+}*/
 
 
 
@@ -533,7 +533,7 @@ function main() {
     adapter.config.pingInterval = parseInt(adapter.config.pingInterval, 10) || 20000;
     adapter.config.paramPingInterval = parseInt(adapter.config.paramPingInterval, 10) || 10000;
 
-    init();
+    // init();
 
     // Abfrageintervall mindestens 10 sec.
     if (adapter.config.paramPingInterval < 10000) {
