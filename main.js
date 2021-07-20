@@ -453,11 +453,11 @@ function getStates(message) {
 
         } else if (answer.id === last_id.send_cmd) {
             if  (answer.error !== undefined) {adapter.log.warn('Command send_cmd failed, err code =' + answer.error.code +')')};
-            if (answer.result !== undefined) {adapter.log.warn('Command send_cmd completed successfully')};
+            if (answer.result !== undefined) {adapter.log.debug('Command send_cmd completed successfully')};
 
         } else if (answer.id === last_id.set_power) {
             if (answer.result[0] === 'ok') {
-                adapter.log.warn('Command set_power completed successfully')}
+                adapter.log.debug('Command set_power completed successfully')}
                 else {adapter.log.warn('Command set_power failed')}
 
         } else if (answer.id === last_id['miIO.info']) {
@@ -518,7 +518,7 @@ function checkSetTimeDiff() {
     packet.timediff = (messageTime - now) === -1 ? 0 : (messageTime - now); // may be (messageTime < now) ? 0...
 
     if (firstSet && packet.timediff !== 0) {
-        adapter.log.warn('Time difference between AC Partner and ioBroker: ' + packet.timediff + ' sec');
+        adapter.log.debug('Time difference between AC Partner and ioBroker: ' + packet.timediff + ' sec');
     }
 
     if (firstSet) {
