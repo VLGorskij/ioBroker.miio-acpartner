@@ -351,7 +351,7 @@ function getStates(message) {
 
             prefix = answer.result[0].slice(0,2) + answer.result[0].slice(8,16);
             suffix = answer.result[0].slice(-1);
-            acpartner.ac_power = answer.result[2];
+            acpartner.ac_power = parseInt(answer.result[2], 10);
             acpartner.rc_type = answer.result[1].slice(-8);
 
             adapter.setStateChanged('service_info.rc_type', acpartner.rc_type, true);
